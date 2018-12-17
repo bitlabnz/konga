@@ -33,8 +33,10 @@
         $scope.close = close;
 
 
-        $scope.humanizeLabel = function (key) {
-          return key.split("_").join(" ");
+        $scope.humanizeLabel = function (key, value) {
+          var keys = Object.keys(value);
+          var label = keys[0]
+          return label.split("_").join(" ");
         };
 
         $scope.addFlexField = function (fields, v) {

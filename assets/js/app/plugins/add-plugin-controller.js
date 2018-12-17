@@ -39,8 +39,10 @@
         // so that it can be included via ng-include in the .html files
         $scope.customPluginForms = ['statsd'];
 
-        $scope.humanizeLabel = function (key) {
-          return key.split("_").join(" ");
+        $scope.humanizeLabel = function (key, value) {
+          var keys = Object.keys(value);
+          var label = keys[0]
+          return label.split("_").join(" ");
         }
 
 
